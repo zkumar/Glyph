@@ -276,6 +276,7 @@ def test_adjusted_multiple_testing_keeps_failed_hypotheses_in_family():
 
 @pytest.mark.parametrize('effect', [-0.6, 0.0, 0.6])
 def test_orthogonal_estimator_matches_frozen_research_reference(effect):
+    pytest.importorskip('xgboost')
     import importlib.util
     reference = Path(__file__).parent / 'reference/fmr_orthogonal_20261023.py'
     spec = importlib.util.spec_from_file_location('research_fmr_reference', reference)

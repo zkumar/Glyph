@@ -22,6 +22,8 @@ from glyph.dataloader import get_dataloader, get_dataloaders
 PNEUMONIA_DATA_PATH = "/dataNAS/people/rholland/pneumonia_data"
 METADATA_PATH = f"{PNEUMONIA_DATA_PATH}/metadata.csv"
 TEST_IMAGE_PATH = f"{PNEUMONIA_DATA_PATH}/images/0.png"
+pytestmark = pytest.mark.skipif(not Path(METADATA_PATH).exists(),
+                                reason=f"Needs the pneumonia dataset at {PNEUMONIA_DATA_PATH}")
 
 
 class TestBaseEmbeddingModel:

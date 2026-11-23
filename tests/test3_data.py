@@ -15,6 +15,8 @@ from glyph.dataloader import GlyphDataset, get_dataloader, get_dataloaders
 # Path to real pneumonia data
 PNEUMONIA_DATA_PATH = "/dataNAS/people/rholland/pneumonia_data"
 METADATA_PATH = f"{PNEUMONIA_DATA_PATH}/metadata.csv"
+pytestmark = pytest.mark.skipif(not Path(METADATA_PATH).exists(),
+                                reason=f"Needs the pneumonia dataset at {PNEUMONIA_DATA_PATH}")
 
 
 class TestGlyphDataset:

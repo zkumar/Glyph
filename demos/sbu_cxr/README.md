@@ -76,7 +76,7 @@ Source: Saltz et al. (2021), [TCIA COVID-19-NY-SBU](https://www.cancerimagingarc
 Use Python 3.10+ and a Glyph checkout:
 
 ```bash
-pip install -e ".[hf]" "pydicom>=3.0" "idc-index-data==25.0.5"
+pip install -e ".[hf]" requests "pydicom>=3.0" "idc-index-data==25.0.5"
 ```
 
 Open `demos/sbu_cxr/demo.ipynb`. First preparation transfers about 14 GB of public DICOM data. Only the converted PNGs and provenance are retained locally; raw DICOM responses are discarded. A saved-run branch makes local review fast; a fresh checkout runs extraction and fitting.

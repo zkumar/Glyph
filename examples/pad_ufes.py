@@ -11,7 +11,6 @@ import zipfile
 import numpy as np
 import pandas as pd
 from PIL import Image
-import requests
 from sklearn.model_selection import train_test_split
 
 from glyph import Glyph
@@ -65,6 +64,7 @@ def download(spec, folder):
     path = Path(folder) / name
     if path.exists() and sha(path) == expected:
         return path
+    import requests
     for attempt in range(3):
         try:
             with requests.get(BASE + file_id + '/file_downloaded', stream=True, timeout=(20, 120)) as r:
