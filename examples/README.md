@@ -9,7 +9,7 @@ Both use official DINOv3 weights and an 8,192-entry dictionary. They produce
 associations, a self-contained HTML explorer and a PDF including activating images.
 
 Install `pip install -e ".[hf]"` from this checkout. For the medical example also
-install `pydicom>=3.0` and `idc-index-data==25.0.5` using Python 3.10 or later.
+install `requests`, `pydicom>=3.0` and `idc-index-data==25.0.5` using Python 3.10 or later.
 DINOv3 requires approved HF access and a configured HF login. Public raw inputs
 and fitted models are cached locally under the ignored `demo_outputs/` directory.
 No author research data or LLM API calls are used.

@@ -82,3 +82,8 @@ include = ["glyph*"]
 
 [tool.setuptools.package-data]
 glyph = ["conf/**/*.yaml", "conf/*.yaml.template", "zoo/assets/*"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]  # lets tests import examples/
+python_files = ["test_*.py", "test[0-9]_*.py"]

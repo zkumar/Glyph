@@ -56,7 +56,7 @@ The combined top-ten arm uses `combined_top_n_strategy="pooled"`: rank clinical 
 
 ## Rerun
 
-Install from the repository with `pip install -e '.[hf]'` and obtain approved access to [DINOv3](https://huggingface.co/facebook/dinov3-vits16-pretrain-lvd1689m). Then run the notebook, or:
+Install from the repository with `pip install -e '.[hf]' requests` and obtain approved access to [DINOv3](https://huggingface.co/facebook/dinov3-vits16-pretrain-lvd1689m). Then run the notebook, or:
 
 ```python
 from pathlib import Path
